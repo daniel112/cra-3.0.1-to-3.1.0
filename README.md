@@ -25,3 +25,4 @@
 * `config/webpack.config.js`
 * `scripts/test.js`
 5. For each of those files, view the conflicts in `vscode` to see the changes between `HEAD` (v3.0.1) and the incoming changes (v3.1.0), to learn the modifications you'll need to make to your ejected files
+  - ![img](images/diff.png) 
