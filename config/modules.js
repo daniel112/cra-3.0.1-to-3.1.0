@@ -4,6 +4,10 @@ const fs = require('fs');
 const path = require('path');
 const paths = require('./paths');
 const chalk = require('react-dev-utils/chalk');
+<<<<<<< HEAD
+=======
+const resolve = require('resolve');
+>>>>>>> update-to-3.1.0
 
 /**
  * Get the baseUrl of a compilerOptions object.
@@ -63,7 +67,14 @@ function getModules() {
   // TypeScript project and set up the config
   // based on tsconfig.json
   if (hasTsConfig) {
+<<<<<<< HEAD
     config = require(paths.appTsConfig);
+=======
+    const ts = require(resolve.sync('typescript', {
+      basedir: paths.appNodeModules,
+    }));
+    config = ts.readConfigFile(paths.appTsConfig, ts.sys.readFile).config;
+>>>>>>> update-to-3.1.0
     // Otherwise we'll check if there is jsconfig.json
     // for non TS projects.
   } else if (hasJsConfig) {
